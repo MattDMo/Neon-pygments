@@ -34,7 +34,7 @@ class NeonStyle(Style):
 
     styles = {
         # token                    http://pygments.org/docs/styles/#style-rules
-        Text:                      "#ffffff", # class:  ''
+        # Text:                      "#ffffff", # class:  ''
         Whitespace:                "#f8f8f8",      # class: 'w'
         Error:                     "#f8f8f8 bg:#800f00", # class: 'err'
         Other:                     "#ffffff",                # class 'x'
