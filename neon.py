@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 """
     pygments.styles.neon
-    ~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~
 
     Neon Pygments style, modified from the Sublime Text/TextMate
-    "Neon Color Scheme" https://github.com/MattDMo/Neon-color-scheme
+    `Neon Color Scheme <https://github.com/MattDMo/Neon-color-scheme>`__
 
     tango.py used as template, as it included all the known
     Token types, unlike most (if not all) of the styles included in the
     Pygments distribution. However, the final version of neon.py bears
-    very little resemblance to tango.
+    no resemblance to tango.
 
     :copyright: Copyright 2013 by Matt Morrison mattdmo@mattdmo.com
     :license: BSD, see LICENSE for details.
@@ -29,12 +29,13 @@ class NeonStyle(Style):
     # work in progress...
 
     background_color = "#000000"
-    default_style = ""
+    highlight_color  = "#2d2d2d"
+    default_style    = ""
 
     styles = {
-        # No corresponding class for the following:
-        #Text:                     "", # class:  ''
-        Whitespace:                "underline #f8f8f8",      # class: 'w'
+        # token                    http://pygments.org/docs/styles/#style-rules
+        Text:                      "#ffffff", # class:  ''
+        Whitespace:                "#f8f8f8",      # class: 'w'
         Error:                     "#f8f8f8 bg:#800f00", # class: 'err'
         Other:                     "#ffffff",                # class 'x'
 
@@ -46,72 +47,69 @@ class NeonStyle(Style):
 
         Keyword:                   "#0b93ff",   # class: 'k'
         Keyword.Constant:          "italic #ff07a0",   # class: 'kc'
-        Keyword.Declaration:       "bold #204a87",   # class: 'kd'
-        Keyword.Namespace:         "bold #204a87",   # class: 'kn'
-        Keyword.Pseudo:            "bold #204a87",   # class: 'kp'
-        Keyword.Reserved:          "bold #204a87",   # class: 'kr'
-        Keyword.Type:              "bold #204a87",   # class: 'kt'
+        Keyword.Declaration:       "#0b93ff",   # class: 'kd'
+        Keyword.Namespace:         "#0b93ff",   # class: 'kn'
+        Keyword.Pseudo:            "#0b93ff",   # class: 'kp'
+        Keyword.Reserved:          "#0b93ff",   # class: 'kr'
+        Keyword.Type:              "#0b93ff",   # class: 'kt'
 
-        Operator:                  "bold #ce5c00",   # class: 'o'
-        Operator.Word:             "bold #204a87",   # class: 'ow' - like keywords
+        Operator:                  "bold #a7a3ff",   # class: 'o'
+        Operator.Word:             "bold #a7a3ff",   # class: 'ow' - like keywords
 
-        Punctuation:               "bold #ffffff",   # class: 'p'
+        Punctuation:               "#fffef7",   # class: 'p'
 
-        # because special names such as Name.Class, Name.Function, etc.
-        # are not recognized as such later in the parsing, we choose them
-        # to look the same as ordinary variables.
-        Name:                      "#ffffff",        # class: 'n'
+        Name:                      "#08d879",        # class: 'n'
         Name.Attribute:            "#c4a000",        # class: 'na' - to be revised
-        Name.Builtin:              "#204a87",        # class: 'nb'
-        Name.Builtin.Pseudo:       "#3465a4",        # class: 'bp'
-        Name.Class:                "#ffffff",        # class: 'nc' - to be revised
-        Name.Constant:             "#ffffff",        # class: 'no' - to be revised
-        Name.Decorator:            "bold #5c35cc",   # class: 'nd' - to be revised
+        Name.Builtin:              "italic #e0a1ff",        # class: 'nb'
+        Name.Builtin.Pseudo:       "italic #0aedff",        # class: 'bp'
+        Name.Class:                "#cfff01",        # class: 'nc' - to be revised
+        Name.Constant:             "italic #eb939a",        # class: 'no' - to be revised
+        Name.Decorator:            "#b6b8fe bg:#070e48",   # class: 'nd' - to be revised
         Name.Entity:               "#ce5c00",        # class: 'ni'
-        Name.Exception:            "bold #cc0000",   # class: 'ne'
-        Name.Function:             "#ffffff",        # class: 'nf'
-        Name.Property:             "#ffffff",        # class: 'py'
+        Name.Exception:            "bold #ff1e00",   # class: 'ne'
+        Name.Function:             "#10ff02",        # class: 'nf'
+        Name.Property:             "#b6b8fe",        # class: 'py'
         Name.Label:                "#f57900",        # class: 'nl'
-        Name.Namespace:            "#ffffff",        # class: 'nn' - to be revised
-        Name.Other:                "#ffffff",        # class: 'nx'
-        Name.Tag:                  "bold #204a87",   # class: 'nt' - like a keyword
-        Name.Variable:             "#ffffff",        # class: 'nv' - to be revised
-        Name.Variable.Class:       "#ffffff",        # class: 'vc' - to be revised
-        Name.Variable.Global:      "#ffffff",        # class: 'vg' - to be revised
-        Name.Variable.Instance:    "#ffffff",        # class: 'vi' - to be revised
+        Name.Namespace:            "#11bd7c",        # class: 'nn' - to be revised
+        Name.Other:                "#ff25d9",        # class: 'nx'
+        Name.Tag:                  "bold #02aeff",   # class: 'nt' - like a keyword
+        Name.Variable:             "#ff25d9",        # class: 'nv' - to be revised
+        Name.Variable.Class:       "#cfff01",        # class: 'vc' - to be revised
+        Name.Variable.Global:      "#d285cc",        # class: 'vg' - to be revised
+        Name.Variable.Instance:    "#d285cc",        # class: 'vi' - to be revised
 
-        Number:                    "bold #0000cf",   # class: 'm'
-        Number.Float:              "bold #0000cf",   # class: 'mf'
-        Number.Hex:                "bold #0000cf",   # class: 'mh'
-        Number.Integer:            "bold #0000cf",   # class: 'mi'
-        Number.Integer.Long:       "bold #0000cf",   # class: 'il'
-        Number.Oct:                "bold #0000cf",   # class: 'mo'
+        Number:                    "#ff0604",   # class: 'm'
+        Number.Float:              "#ff0604",   # class: 'mf'
+        Number.Hex:                "italic #ff0604",   # class: 'mh'
+        Number.Integer:            "#ff0604",   # class: 'mi'
+        Number.Integer.Long:       "#ff0604",   # class: 'il'
+        Number.Oct:                "italic #ff0604",   # class: 'mo'
 
-        Literal:                   "#ffffff",        # class: 'l'
-        Literal.Date:              "#ffffff",        # class: 'ld'
+        Literal:                   "#db1e44",        # class: 'l'
+        Literal.Date:              "#14ff01",        # class: 'ld'
 
-        String:                    "#4e9a06",        # class: 's'
-        String.Backtick:           "#4e9a06",        # class: 'sb'
-        String.Char:               "#4e9a06",        # class: 'sc'
+        String:                    "#ffdf02",        # class: 's'
+        String.Backtick:           "italic #ffdf02",        # class: 'sb'
+        String.Char:               "#ffdf02",        # class: 'sc'
         String.Doc:                "italic #218b97", # class: 'sd' - like a comment
-        String.Double:             "#4e9a06",        # class: 's2'
-        String.Escape:             "#4e9a06",        # class: 'se'
-        String.Heredoc:            "italic #218b97",        # class: 'sh'
-        String.Interpol:           "#4e9a06",        # class: 'si'
-        String.Other:              "#4e9a06",        # class: 'sx'
-        String.Regex:              "#4e9a06",        # class: 'sr'
-        String.Single:             "#4e9a06",        # class: 's1'
-        String.Symbol:             "#4e9a06",        # class: 'ss'
+        String.Double:             "#ffdf02",        # class: 's2'
+        String.Escape:             "italic #ff087b",        # class: 'se'
+        String.Heredoc:            "italic #3a771f",        # class: 'sh'
+        String.Interpol:           "#ffdf02",        # class: 'si'
+        String.Other:              "#ffdf02",        # class: 'sx'
+        String.Regex:              "#ffe4a6",        # class: 'sr'
+        String.Single:             "#ffdf02",        # class: 's1'
+        String.Symbol:             "#ff9705",        # class: 'ss'
 
         Generic:                   "#ffffff",        # class: 'g'
-        Generic.Deleted:           "#a40000",        # class: 'gd'
-        Generic.Emph:              "italic #ffffff", # class: 'ge'
-        Generic.Error:             "#ef2929",        # class: 'gr'
+        Generic.Deleted:           "#f8f8f8 bg:#4c0900",        # class: 'gd'
+        Generic.Emph:              "bold italic #ffffff", # class: 'ge'
+        Generic.Error:             "bold #ff1e00",        # class: 'gr'
         Generic.Heading:           "bold #000080",   # class: 'gh'
-        Generic.Inserted:          "#00A000",        # class: 'gi'
+        Generic.Inserted:          "#f8f8f8 bg:#154f00",        # class: 'gi'
         Generic.Output:            "italic #ffffff", # class: 'go'
-        Generic.Prompt:            "#8f5902",        # class: 'gp'
+        Generic.Prompt:            "#22ff31",        # class: 'gp'
         Generic.Strong:            "bold #ffffff",   # class: 'gs'
-        Generic.Subheading:        "bold #800080",   # class: 'gu'
-        Generic.Traceback:         "bold #a40000",   # class: 'gt'
+        Generic.Subheading:        "bold #ff00ff",   # class: 'gu'
+        Generic.Traceback:         "bold #f00bad",   # class: 'gt'
     }
